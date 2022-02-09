@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="validLogin"/>
+        <include name="invalidLogin"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.ExitTest.tests.HomePageTests">
+        <methods>
+          <include name="endReport"/>
+          <include name="initializeWebDriver"/>
+          <include name="attachScreenshot"/>
+          <include name="setExtent"/>
+          <include name="removeWishlistProduct"/>
+          <include name="openUrl"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.ExitTest.tests.HomePageTests -->
+      <class name="com.ExitTest.tests.CartTests">
+        <methods>
+          <include name="endReport"/>
+          <include name="initializeWebDriver"/>
+          <include name="attachScreenshot"/>
+          <include name="RemoveProductFromCart"/>
+          <include name="setExtent"/>
+          <include name="openUrl"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.ExitTest.tests.CartTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

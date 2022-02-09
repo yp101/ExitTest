@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <groups>
+  <run>
+    <include name="validLogin"/> 
+    <include name="invalidLogin"/> 
+    
+  </run>
+  </groups>
+  <classes>
+    <class name="com.ExitTest.tests.LoginPageTests"/>
+      <class name="com.ExitTest.tests.LogoutPageTests"/>
+      <class name="com.ExitTest.tests.HomePageTests"/>   
+      <class name="com.ExitTest.tests.CartTests"/>   
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

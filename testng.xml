@@ -10,8 +10,9 @@
   </run>
   </groups>
   <classes>
-    <class name="com.ExitTest.tests.LoginPageTests"/>
+
       <class name="com.ExitTest.tests.LogoutPageTests"/>
+    <class name="com.ExitTest.tests.LoginPageTests"/>
       <class name="com.ExitTest.tests.HomePageTests"/>   
       <class name="com.ExitTest.tests.CartTests"/>   
     </classes>

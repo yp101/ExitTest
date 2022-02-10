@@ -12,10 +12,13 @@
       <class name="com.ExitTest.tests.HomePageTests">
         <methods>
           <include name="endReport"/>
+          <include name="flipkartCoupons"/>
           <include name="initializeWebDriver"/>
           <include name="attachScreenshot"/>
           <include name="setExtent"/>
+          <include name="wishlistProduct"/>
           <include name="removeWishlistProduct"/>
+          <include name="myOrders"/>
           <include name="openUrl"/>
           <include name="closeBrowser"/>
         </methods>
@@ -31,6 +34,17 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.ExitTest.tests.CartTests -->
+      <class name="com.ExitTest.tests.LoginPageTests">
+        <methods>
+          <include name="endReport"/>
+          <include name="invalidPassword"/>
+          <include name="initializeWebDriver"/>
+          <include name="attachScreenshot"/>
+          <include name="setExtent"/>
+          <include name="openUrl"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.ExitTest.tests.LoginPageTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

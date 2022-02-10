@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-// includes read and write operation for excel file
+//  excel file read and write operation
 
 @SuppressWarnings("deprecation")
 public class ReadDataFromExcel {
@@ -42,7 +42,7 @@ public class ReadDataFromExcel {
 			e.printStackTrace();
 		}
 	}
-	// returns the row count in a sheet
+	// returns the row count 
 
 	public int getRowCount(String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
@@ -71,7 +71,6 @@ public class ReadDataFromExcel {
 			sheet = workbook.getSheetAt(index);
 			row = sheet.getRow(0);
 			for (int i = 0; i < row.getLastCellNum(); i++) {
-				// System.out.println(row.getCell(i).getStringCellValue().trim());
 				if (row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
 					col_Num = i;
 			}
@@ -87,15 +86,10 @@ public class ReadDataFromExcel {
 			if (cell == null)
 				return "";
 
-			// System.out.println(cell.getCellType().name());
-			//
+			
 			if (cell.getCellType().name().equals("STRING"))
 				return cell.getStringCellValue();
 
-			// if (cell.getCellType().STRING != null)
-
-			// if(cell.getCellType()==Xls_Reader.CELL_TYPE_STRING)
-			// return cell.getStringCellValue();
 			else if ((cell.getCellType().name().equals("NUMERIC")) || (cell.getCellType().name().equals("FORMULA"))) {
 
 				String cellText = String.valueOf(cell.getNumericCellValue());
@@ -107,8 +101,6 @@ public class ReadDataFromExcel {
 					cal.setTime(DateUtil.getJavaDate(d));
 					cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
 					cellText = cal.get(Calendar.DAY_OF_MONTH) + "/" + cal.get(Calendar.MONTH) + 1 + "/" + cellText;
-
-					// System.out.println(cellText);
 
 				}
 
@@ -160,8 +152,6 @@ public class ReadDataFromExcel {
 					cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
 					cellText = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.DAY_OF_MONTH) + "/" + cellText;
 
-					// System.out.println(cellText);
-
 				}
 
 				return cellText;
@@ -194,7 +184,6 @@ public class ReadDataFromExcel {
 
 			row = sheet.getRow(0);
 			for (int i = 0; i < row.getLastCellNum(); i++) {
-				// System.out.println(row.getCell(i).getStringCellValue().trim());
 				if (row.getCell(i).getStringCellValue().trim().equals(colName))
 					colNum = i;
 			}
@@ -241,8 +230,6 @@ public class ReadDataFromExcel {
 		return true;
 	}
 
-	// returns true if sheet is removed successfully else false if sheet does
-	// not exist
 	public boolean removeSheet(String sheetName) {
 		int index = workbook.getSheetIndex(sheetName);
 		if (index == -1)
@@ -315,7 +302,6 @@ public class ReadDataFromExcel {
 
 	// returns number of columns in a sheet
 	public int getColumnCount(String sheetName) {
-		// check if sheet exists
 		if (!isSheetExist(sheetName))
 			return -1;
 
@@ -344,8 +330,6 @@ public class ReadDataFromExcel {
 	public HashMap<String, String> getRowTestData(String worksheetName, String testName) {
 
 		HashMap<String, String> testData = new HashMap<String, String>();
-
-		// sheet = workbook.getSheet(worksheetName);
 
 		for (int i = 2; i <= getRowCount(worksheetName); i++) {
 

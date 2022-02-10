@@ -1,0 +1,7 @@
+com\ExitTest\utils\CommonUtils.class
+com\ExitTest\tests\HomePageTests.class
+com\ExitTest\tests\LogoutPageTests.class
+com\ExitTest\tests\CartTests.class
+com\ExitTest\tests\BaseTest.class
+com\ExitTest\utils\ReadDataFromExcel.class
+com\ExitTest\tests\LoginPageTests.class

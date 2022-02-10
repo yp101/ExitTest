@@ -18,10 +18,9 @@ public class HomePageTests extends BaseTest {
 	@Test(groups= {"validLogin"},priority=8, enabled = true)
 	public void productSearch() throws InterruptedException {
 
-		String testCaseName1 = "whenUserSearchTheProduct";
+		String testCaseName1 = "UserSearchTheProduct";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
-//		try{
 			extentTest = extent.startTest("Verifying the functionality of Search product");
 			fetchData = reader.getRowTestData(sheetName1, testCaseName1);
 	
@@ -44,12 +43,6 @@ public class HomePageTests extends BaseTest {
 			Assert.assertEquals(driver.getTitle(), title);
 			extentTest.log(LogStatus.PASS, "Search product Functionality is working fine");
 			extent.endTest(extentTest);
-//			}
-//			catch(AssertionError e) {
-//			extentTest.log(LogStatus.FAIL,"failed");
-//			extent.endTest(extentTest);
-//
-//			}
 			
 	}
 	
@@ -57,7 +50,7 @@ public class HomePageTests extends BaseTest {
 	@Test(groups= {"validLogin"},priority=9, enabled = true)
 	public void wishlistProduct() throws InterruptedException {
 
-		String testCaseName1 = "whenUserWishlistProduct";
+		String testCaseName1 = "UserWishlistProduct";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -77,9 +70,7 @@ public class HomePageTests extends BaseTest {
 	
 			String search=fetchData.get("ProductSearch");
 			Thread.sleep(2000);
-			//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			home.searchProduct(search);
-			//driver.manage().timeouts().implicitlyWait(230,TimeUnit.SECONDS);
 			Thread.sleep(2000);
 			home.addToWishlist();
 			Thread.sleep(2000);
@@ -94,17 +85,12 @@ public class HomePageTests extends BaseTest {
 
 			}
 
-
-	
-		//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
 	}
 
 	@Test(groups= {"validLogin"},priority=10, enabled = true)
 	public void removeWishlistProduct() throws InterruptedException {
 
-		String testCaseName1 = "whenUserRemoveProductFromWishlist";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserRemoveProductFromWishlist";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Remove Wishlist product");
@@ -135,16 +121,13 @@ public class HomePageTests extends BaseTest {
 
 			}
  
-	
-		//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
 	}
 	
 	@Test(groups= {"validLogin"},priority=11, enabled = true)
 	public void myOrders() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClickOrders";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserClickOrders";
+
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Myorder");
@@ -174,15 +157,13 @@ public class HomePageTests extends BaseTest {
 		extent.endTest(extentTest);
 
 		}
-		//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
+
 	}
-//	
+	
 	@Test(groups= {"validLogin"},priority=12, enabled = true)
 	public void superCoin() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClickSuperCoins";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserClickSuperCoins";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Super Coin");
@@ -218,16 +199,12 @@ public class HomePageTests extends BaseTest {
 
 		}
 		
-		
-//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
 	}
 	
 	@Test(groups= {"validLogin"},priority=13, enabled = true)
 	public void flipkartLogo() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClickFlipkartLogo";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserClickFlipkartLogo";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Flipkart Logo");
@@ -263,18 +240,14 @@ public class HomePageTests extends BaseTest {
 			extent.endTest(extentTest);
 
 			}
-		
-		
-//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
+
 	}
 	
 	
 	@Test(groups= {"validLogin"},priority=14, enabled = true)
 	public void flipkartPlusZone() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClickFlipkartPlusZone";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserClickFlipkartPlusZone";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Flipkart PlusZone");
@@ -310,18 +283,14 @@ public class HomePageTests extends BaseTest {
 			extent.endTest(extentTest);
 
 			}
-		
-		
-//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
+
 	}
 	
 	
 	
 	@Test(groups= {"validLogin"},priority=15, enabled = true)
 	public void flipkartCoupons() throws InterruptedException {
-		String testCaseName1 = "whenUserClickCoupons";
-		// Fetching all test data from excel file
+		String testCaseName1 = "UserClickCoupons";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
 			extentTest = extent.startTest("Verifying the functionality of Flipkart Coupons");
@@ -354,17 +323,13 @@ public class HomePageTests extends BaseTest {
 			extent.endTest(extentTest);
 
 			}
-		
-		
-//		extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
+
 	}
 	
 	@Test(groups= {"validLogin"},priority=16, enabled = true)
 		public void flipkartNotifications() throws InterruptedException {
 
-			String testCaseName1 = "whenUserClickNotifications";
-			// Fetching all test data from excel file
+			String testCaseName1 = "UserClickNotifications";
 			HashMap<String, String> fetchData = new HashMap<String,String>();
 			try{
 				extentTest = extent.startTest("Verifying the functionality of Flipkart Notification");
@@ -402,7 +367,7 @@ public class HomePageTests extends BaseTest {
 	@Test(groups= {"validLogin"},priority=17, enabled = true)
 	public void flipkartFilterType() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClicksNIKE";
+		String testCaseName1 = "UserClicksNIKE";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -443,9 +408,9 @@ public class HomePageTests extends BaseTest {
 	}
 	
 	@Test(groups= {"validLogin"},priority=18, enabled = true)
-	public void sortLowToHigh() throws InterruptedException {
+	public void clickNext() throws InterruptedException {
 
-		String testCaseName1 = "whenUserClicksNextButton";
+		String testCaseName1 = "UserClicksNextButton";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{

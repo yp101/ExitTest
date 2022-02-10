@@ -19,8 +19,7 @@ public class LogoutPageTests extends BaseTest {
 
 	@Test(groups= {"validLogin"},priority=7, enabled = true)
 	public void logout() throws InterruptedException {
-		//extentTest=extent.startTest("verifying the valid login");
-		String testCaseName = "whenUserClickLogoutButton";
+		String testCaseName = "UserClickLogoutButton";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -55,7 +54,6 @@ public class LogoutPageTests extends BaseTest {
 
 			}
 
-		//assert.assertEquals(driver.getClass(),"_1_3w1N");
 
 	}
 }

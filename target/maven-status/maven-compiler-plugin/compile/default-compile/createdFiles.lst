@@ -1,0 +1,6 @@
+com\ExitTest\pages\HomePage.class
+com\ExitTest\pages\LoginPage.class
+com\ExitTest\pages\SwitchWindow.class
+com\ExitTest\pages\LogoutPage.class
+com\ExitTest\pages\CartTest.class
+com\ExitTest\pages\ScreenShots.class

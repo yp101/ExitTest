@@ -9,7 +9,7 @@
           <include name="initializeWebDriver"/>
           <include name="attachScreenshot"/>
           <include name="setExtent"/>
-          <include name="sortLowToHigh"/>
+          <include name="clickNext"/>
           <include name="openUrl"/>
           <include name="closeBrowser"/>
         </methods>

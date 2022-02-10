@@ -18,17 +18,14 @@ public class LoginPageTests extends BaseTest {
 
 	private String sheetName = prop.getProperty("loginPageSheetName");
 
-	// Test 1 : To test the Valid Login functionality
 	@Test(groups = { "validLogin" }, priority = 1, enabled = true)
 
 	public void validLogin() throws InterruptedException {
-		// extentTest=extent.startTest("verifying the valid login");
-		String testCaseName = "whenUserEntersValidMobileNumberAndValidPassword";
+		String testCaseName = "UserEntersValidMobileNumberAndValidPassword";
 		HashMap<String, String> fetchData = new HashMap<String, String>();
 		try {
 			extentTest = extent.startTest("Verifying the functionality of Valid Login page");
 
-			// Fetching all test data from excel file
 
 			fetchData = reader.getRowTestData(sheetName, testCaseName);
 
@@ -39,11 +36,10 @@ public class LoginPageTests extends BaseTest {
 			// log all data
 			CommonUtils.logTestData(sheetName, testCaseName);
 
-			// if execution required field is null
 			CommonUtils.toCheckExecutionRequired(executionRequired);
 
 			LoginPage login = new LoginPage(driver);
-			// Thread.sleep(2000);
+
 			login.enterUserName(username);
 			login.enterPassword(password);
 			Thread.sleep(2000);
@@ -60,16 +56,13 @@ public class LoginPageTests extends BaseTest {
 
 		}
 
-//		 extentTest.log(LogStatus.PASS,"Login done Successfully!!!");
-//		extent.endTest(extentTest);
 	}
 
 	
-	// Test 2 : To test the Invalid (Username field) Login functionality
-	@Test(groups = { "invalidLogin" }, priority = 2, enabled = true)
+	@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 	public void invalidUsername() throws InterruptedException {
 
-		String testCaseName = "whenUserEntersInvalidMobileNumberAndValidPassword";
+		String testCaseName = "UserEntersInvalidMobileNumberAndValidPassword";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String, String>();
 		try {
@@ -104,11 +97,10 @@ public class LoginPageTests extends BaseTest {
 		}
 	}
 
-	// Test 3 : To test the Invalid(passwordword) Login functionality
-	@Test(groups = { "invalidLogin" }, priority = 3, enabled = true)
+	@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 	public void invalidPassword() {
 
-		String testCaseName = "whenUserEntersValidMobileNumberAndInvalidPassword";
+		String testCaseName = "UserEntersValidMobileNumberAndInvalidPassword";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String, String>();
 		try {
@@ -142,12 +134,11 @@ public class LoginPageTests extends BaseTest {
 
 	}
 	
-	
-	// Test 4 : To test the Invalid(passwordword) Login functionality
-		@Test(groups = { "invalidLogin" }, priority = 4, enabled = true)
+
+		@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 		public void invalidUsernameAndPassword() {
 
-			String testCaseName = "whenUserEntersInvalidMobileNumberAndInvalidPassword";
+			String testCaseName = "UserEntersInvalidMobileNumberAndInvalidPassword";
 			// Fetching all test data from excel file
 			HashMap<String, String> fetchData = new HashMap<String, String>();
 			try {

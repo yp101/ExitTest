@@ -23,7 +23,7 @@ public class HomePage {
 	@FindBy(how=How.XPATH,using="//button[@type='submit']//*[name()='svg']")
 	public WebElement searchIcon;
 	
-	//addtowishlishxpaths
+	//add to wish list xpaths
 	@FindBy(how=How.XPATH,using="//div[@class='_1YokD2 _3Mn1Gg']//div[2]//div[1]//div[3]//div[1]//a[1]//div[3]//div[1]//*[name()='svg']//*[name()='path' and contains(@class,'eX72wL')]")
 	public WebElement heartIcon;
 	@FindBy(how=How.XPATH,using="//div[@class='exehdJ'][normalize-space()='Yash']")
@@ -33,7 +33,7 @@ public class HomePage {
 	@FindBy(how=How.XPATH,using="//span[normalize-space()='My Wishlist (1)']")
 	public WebElement message;
 	
-	//removefromwishlistxpaths
+	//remove from wishlist xpaths
 	
 	@FindBy(how=How.XPATH,using="//img[@class='_2Nq6Qc']")
 	public WebElement delete;
@@ -46,9 +46,14 @@ public class HomePage {
 	@FindBy(how=How.XPATH,using="//div[normalize-space()='Orders']")
 	public WebElement orders;
 	
-	//supercoin
-	@FindBy(how=How.XPATH,using="//a[@href='/supercoin']")
-	public WebElement coins;
+	//productfilterType
+	@FindBy(how=How.XPATH,using="//div[@title='NIKE']//div[@class='_24_Dny']")
+	public WebElement producttype;
+	@FindBy(how=How.CLASS_NAME,using="_3sckoD")
+	public WebElement filtermessage;
+	@FindBy(how=How.CLASS_NAME,using="_10Ermr")
+	public WebElement nextpagemsg;
+	
 	//Flipkart
 	@FindBy(how=How.XPATH,using="//img[@title='Flipkart']")
 	public WebElement flipkart;
@@ -61,24 +66,17 @@ public class HomePage {
 	@FindBy(how=How.XPATH,using="//div[@class='HrTrMw']")
 	public WebElement cuponcheck;
 	
+	//supercoin
+	@FindBy(how=How.XPATH,using="//a[@href='/supercoin']")
+	public WebElement coins;
+		
 	//notifications
 	@FindBy(how=How.XPATH,using="//div[normalize-space()='Notifications']")
 	public WebElement notification;
 	@FindBy(how=How.XPATH,using="//div[@class='TQWXTH']")
 	public WebElement caughtup;
-	//productfilterType
-	@FindBy(how=How.XPATH,using="//div[@title='NIKE']//div[@class='_24_Dny']")
-	public WebElement producttype;
-	
-	@FindBy(how=How.CLASS_NAME,using="_3sckoD")
-	public WebElement filtermessage;
-	
-	@FindBy(how=How.CLASS_NAME,using="_10Ermr")
-	public WebElement nextpagemsg;
-	
-
-	
-	//sortLowToHigh
+		
+	//nextpage
 	@FindBy(how=How.XPATH,using="//span[normalize-space()='Next']")
 	public WebElement nextpage;
 	
@@ -89,8 +87,6 @@ public class HomePage {
 	public void searchProduct(String name) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		searchBox.sendKeys(name);
-		
-		
 		searchIcon.click();
 
 	}

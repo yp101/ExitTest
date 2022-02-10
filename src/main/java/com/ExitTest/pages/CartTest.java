@@ -51,9 +51,6 @@ public class CartTest {
 	@FindBy(how=How.XPATH,using="//span[normalize-space()='Size Chart']")
 	public WebElement sizechart;
 	
-//	@FindBy(how=How.CLASS_NAME ,using="_3g_HeN")
-//	public WebElement savelatermessage;
-	
 	@FindBy(how=How.XPATH ,using="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]")
 	public WebElement later;     
 	
@@ -96,8 +93,6 @@ public class CartTest {
 		sizechart.click();
 	}
 	
-//	public void saveForLater() {
-//		savelater.click();
 	}
 	
 

@@ -19,9 +19,6 @@ public class LogoutPage {
 	@FindBy(how=How.XPATH,using="//div[contains(text(),'Yash')]")
 	public WebElement profileButton;
 	
-//	@FindBy(how=How.XPATH, using="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[10]/a[1]")
-//	public WebElement logout;
-	
 	@FindBy(how=How.XPATH, using="//div[contains(text(),'Logout')]")
 	public WebElement logout;
 	

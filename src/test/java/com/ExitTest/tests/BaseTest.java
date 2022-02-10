@@ -9,6 +9,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -23,6 +26,8 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 //import org.apache.loging.log4j.LogManager;
 //import org.apache.loging.log4j.loger;
 import org.apache.log4j.Logger;
@@ -35,7 +40,7 @@ public class BaseTest {
 	static File file=new File("./Resources/config.properties");
 	static FileInputStream fis=null;
 	static Properties prop=new Properties();
-	
+	public static String Browser;
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
 	
@@ -62,9 +67,6 @@ public class BaseTest {
 	
 	// Exception Handling for Excel File
 	try {
-
-
-
 	reader = new ReadDataFromExcel(prop.getProperty("testDataFileLocation"));
 	}
 	catch(Exception e)
@@ -102,10 +104,32 @@ public class BaseTest {
 
 	@BeforeMethod(groups= {"validLogin"})
 	public static void initializeWebDriver(){
-		System.setProperty(prop.getProperty("chromeDriverProperty"),prop.getProperty("chromeDriverPath"));
+		 Browser = prop.getProperty("browser");
+
+		if (Browser.equalsIgnoreCase("chromehl")) {
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		options.addArguments("--window-size=1400,600");
+		driver = new ChromeDriver(options);
+		}
+		else if (Browser.equalsIgnoreCase("chrome")) {
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		}
+		else if (Browser.equalsIgnoreCase("firefox")) {
+		System.setProperty(prop.getProperty("firefoxDriverProperty"),prop.getProperty("firefoxDriverPath"));
+		driver = new FirefoxDriver();
+		WebDriverManager.firefoxdriver().setup();
+		}
+		else if (Browser.equalsIgnoreCase("edge")) {
+		System.setProperty(prop.getProperty("edgeDriverProperty"),prop.getProperty("edgeDriverPath"));
+		driver = new EdgeDriver();
+		WebDriverManager.edgedriver().setup();
+
+
+
+		}
 		driver.manage().window().maximize();
 	}
 	@BeforeMethod(groups= {"validLogin"})

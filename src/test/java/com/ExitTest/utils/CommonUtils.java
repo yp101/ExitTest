@@ -1,9 +1,5 @@
 package com.ExitTest.utils;
 
-
-
-
-
 import java.util.HashMap;
 
 import org.testng.SkipException;
@@ -19,7 +15,6 @@ public class CommonUtils extends BaseTest{
 		   testData = reader.getRowTestData(worksheetName, testCaseName);
 
 		   // Print all data
-		   log.info("----------------------------------------------------------------------");
 		   extentTest.log(LogStatus.INFO, "--------------------------- Test Data -------------------------------");
 
 		   log.info("Test Data For Worksheet Name "+worksheetName+" And For Test Case "+testCaseName);

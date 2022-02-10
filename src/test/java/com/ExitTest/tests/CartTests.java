@@ -18,11 +18,11 @@ public class CartTests extends BaseTest {
 	private String sheetName1 = prop.getProperty("AddToCartPageSheetName");
 	
 	
-	@Test(groups= {"validLogin"},priority=18, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void AddProductToCart() throws InterruptedException {
 		
 
-		String testCaseName1 = "whenUserAddsProductToCart";
+		String testCaseName1 = "UserAddsProductToCart";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -42,9 +42,8 @@ public class CartTests extends BaseTest {
 	
 			String search=fetchData.get("ProductSearch");
 			Thread.sleep(5000);
-			//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
 			home.searchProduct(search);
-			//driver.manage().timeouts().implicitlyWait(230,TimeUnit.SECONDS);
 			Thread.sleep(5000);
 			
 			CartTest add=new CartTest(driver);
@@ -64,10 +63,10 @@ public class CartTests extends BaseTest {
 
 	}
 	
-	@Test(groups= {"validLogin"},priority=19, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void RemoveProductFromCart() throws InterruptedException {
 		
-		String testCaseName1 = "whenUserRemoveProductFromCart";
+		String testCaseName1 = "UserRemoveProductFromCart";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -87,9 +86,8 @@ public class CartTests extends BaseTest {
 	
 			String search=fetchData.get("ProductSearch");
 			Thread.sleep(5000);
-			//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
 			home.searchProduct(search);
-			//driver.manage().timeouts().implicitlyWait(230,TimeUnit.SECONDS);
 			Thread.sleep(5000);
 			
 			CartTest add=new CartTest(driver);
@@ -110,11 +108,11 @@ public class CartTests extends BaseTest {
 	}
 	
 	
-	@Test(groups= {"validLogin"},priority=20, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void SaveForLater() throws InterruptedException {
 		
 
-		String testCaseName1 = "whenUserClickSaveForLater";
+		String testCaseName1 = "UserClickSaveForLater";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -134,9 +132,8 @@ public class CartTests extends BaseTest {
 	
 			String search=fetchData.get("ProductSearch");
 			Thread.sleep(5000);
-			//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
 			home.searchProduct(search);
-			//driver.manage().timeouts().implicitlyWait(230,TimeUnit.SECONDS);
 			Thread.sleep(5000);
 			CartTest add=new CartTest(driver);
 	
@@ -159,11 +156,11 @@ public class CartTests extends BaseTest {
 	
 	
 	
-	@Test(groups= {"validLogin"},priority=21, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void checkSize() throws InterruptedException {
 		
 
-		String testCaseName1 = "whenUserClicksOnCheckSize";
+		String testCaseName1 = "UserClicksOnCheckSize";
 		// Fetching all test data from excel file
 		HashMap<String, String> fetchData = new HashMap<String,String>();
 		try{
@@ -183,9 +180,7 @@ public class CartTests extends BaseTest {
 	
 			String search=fetchData.get("ProductSearch");
 			Thread.sleep(5000);
-			//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			home.searchProduct(search);
-			//driver.manage().timeouts().implicitlyWait(230,TimeUnit.SECONDS);
 			Thread.sleep(5000);
 			CartTest add=new CartTest(driver);
 			

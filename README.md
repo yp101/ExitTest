@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 
 # Flipkart-Automation
 <i>Feburary 2022</i><br>
 <p>An automation test framework for Flipkart.com, Written in Java, using Selenium WebDriver, TestNG and Maven based on the knowledge gained in trainning period as an automation engineer at Nagarro.</p>
+=======
+# Flipkart-Automation
+<i>Feburary 2022</i><br>
+<i>By: Yash Patel</i><br>
+
+<i>Github link: https://github.com/yp101/ExitTest.git</i><br>
+
+<p>An automation test framework for Flipkart.com, Written in Java, using Selenium WebDriver, TestNG and Maven based on the knowledge gained in trainning period. </p>
+>>>>>>> aeea82a (comm1)
 
 </blockquote>
 
@@ -54,4 +64,10 @@ The directory structure:
 - Rebuild the project on your machine
 
 
+<<<<<<< HEAD
 
+=======
+##Note
+
+some tests might fail due to max attempts of login or network latency errors.
+>>>>>>> aeea82a (comm1)

@@ -17,7 +17,7 @@ public class LogoutPageTests extends BaseTest {
 	
 	private String sheetName = prop.getProperty("logoutPageSheetName");
 
-	@Test(groups= {"validLogin"},priority=7, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void logout() throws InterruptedException {
 		String testCaseName = "UserClickLogoutButton";
 		// Fetching all test data from excel file

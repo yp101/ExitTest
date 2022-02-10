@@ -15,7 +15,7 @@ public class HomePageTests extends BaseTest {
 	
 	private String sheetName1 = prop.getProperty("homePageSheetName");
 	
-	@Test(groups= {"validLogin"},priority=8, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void productSearch() throws InterruptedException {
 
 		String testCaseName1 = "UserSearchTheProduct";
@@ -47,7 +47,7 @@ public class HomePageTests extends BaseTest {
 	}
 	
 	
-	@Test(groups= {"validLogin"},priority=9, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void wishlistProduct() throws InterruptedException {
 
 		String testCaseName1 = "UserWishlistProduct";
@@ -87,7 +87,7 @@ public class HomePageTests extends BaseTest {
 
 	}
 
-	@Test(groups= {"validLogin"},priority=10, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void removeWishlistProduct() throws InterruptedException {
 
 		String testCaseName1 = "UserRemoveProductFromWishlist";
@@ -123,7 +123,7 @@ public class HomePageTests extends BaseTest {
  
 	}
 	
-	@Test(groups= {"validLogin"},priority=11, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void myOrders() throws InterruptedException {
 
 		String testCaseName1 = "UserClickOrders";
@@ -160,7 +160,7 @@ public class HomePageTests extends BaseTest {
 
 	}
 	
-	@Test(groups= {"validLogin"},priority=12, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void superCoin() throws InterruptedException {
 
 		String testCaseName1 = "UserClickSuperCoins";
@@ -201,7 +201,7 @@ public class HomePageTests extends BaseTest {
 		
 	}
 	
-	@Test(groups= {"validLogin"},priority=13, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void flipkartLogo() throws InterruptedException {
 
 		String testCaseName1 = "UserClickFlipkartLogo";
@@ -244,7 +244,7 @@ public class HomePageTests extends BaseTest {
 	}
 	
 	
-	@Test(groups= {"validLogin"},priority=14, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void flipkartPlusZone() throws InterruptedException {
 
 		String testCaseName1 = "UserClickFlipkartPlusZone";
@@ -288,7 +288,7 @@ public class HomePageTests extends BaseTest {
 	
 	
 	
-	@Test(groups= {"validLogin"},priority=15, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void flipkartCoupons() throws InterruptedException {
 		String testCaseName1 = "UserClickCoupons";
 		HashMap<String, String> fetchData = new HashMap<String,String>();
@@ -326,7 +326,7 @@ public class HomePageTests extends BaseTest {
 
 	}
 	
-	@Test(groups= {"validLogin"},priority=16, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 		public void flipkartNotifications() throws InterruptedException {
 
 			String testCaseName1 = "UserClickNotifications";
@@ -364,7 +364,7 @@ public class HomePageTests extends BaseTest {
 
 		}
 
-	@Test(groups= {"validLogin"},priority=17, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void flipkartFilterType() throws InterruptedException {
 
 		String testCaseName1 = "UserClicksNIKE";
@@ -407,7 +407,7 @@ public class HomePageTests extends BaseTest {
 
 	}
 	
-	@Test(groups= {"validLogin"},priority=18, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void clickNext() throws InterruptedException {
 
 		String testCaseName1 = "UserClicksNextButton";

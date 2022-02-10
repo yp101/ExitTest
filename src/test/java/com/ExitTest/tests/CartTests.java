@@ -18,7 +18,7 @@ public class CartTests extends BaseTest {
 	private String sheetName1 = prop.getProperty("AddToCartPageSheetName");
 	
 	
-	@Test(groups= {"validLogin"},priority=18, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void AddProductToCart() throws InterruptedException {
 		
 
@@ -63,7 +63,7 @@ public class CartTests extends BaseTest {
 
 	}
 	
-	@Test(groups= {"validLogin"},priority=19, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void RemoveProductFromCart() throws InterruptedException {
 		
 		String testCaseName1 = "UserRemoveProductFromCart";
@@ -108,7 +108,7 @@ public class CartTests extends BaseTest {
 	}
 	
 	
-	@Test(groups= {"validLogin"},priority=20, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void SaveForLater() throws InterruptedException {
 		
 
@@ -156,7 +156,7 @@ public class CartTests extends BaseTest {
 	
 	
 	
-	@Test(groups= {"validLogin"},priority=21, enabled = true)
+	@Test(groups= {"validLogin"},priority=1, enabled = true)
 	public void checkSize() throws InterruptedException {
 		
 

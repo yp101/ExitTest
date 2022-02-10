@@ -59,7 +59,7 @@ public class LoginPageTests extends BaseTest {
 	}
 
 	
-	@Test(groups = { "invalidLogin" }, priority = 2, enabled = true)
+	@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 	public void invalidUsername() throws InterruptedException {
 
 		String testCaseName = "UserEntersInvalidMobileNumberAndValidPassword";
@@ -97,7 +97,7 @@ public class LoginPageTests extends BaseTest {
 		}
 	}
 
-	@Test(groups = { "invalidLogin" }, priority = 3, enabled = true)
+	@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 	public void invalidPassword() {
 
 		String testCaseName = "UserEntersValidMobileNumberAndInvalidPassword";
@@ -135,7 +135,7 @@ public class LoginPageTests extends BaseTest {
 	}
 	
 
-		@Test(groups = { "invalidLogin" }, priority = 4, enabled = true)
+		@Test(groups = { "invalidLogin" }, priority = 1, enabled = true)
 		public void invalidUsernameAndPassword() {
 
 			String testCaseName = "UserEntersInvalidMobileNumberAndInvalidPassword";
